@@ -75,5 +75,10 @@ jobs:
         docker build -t  $CONTAINER_IMAGE -t $CONTAINER_IMAGE_LATEST .  
         docker push $CONTAINER_IMAGE
         docker push $CONTAINER_IMAGE_LATEST
+   
+    - name: Scan image
+      uses: anchore/scan-action@v2
+      with:
+        image: ${{env.REPO}}:${{github.sha}}
     
     

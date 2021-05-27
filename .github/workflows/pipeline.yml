@@ -6,7 +6,7 @@ on:
   pull_request: 
     branches: [ main ]
 env:
-  REPO: devops-foundations
+  REPO: gdelgadoh/devops-foundations
   
 jobs:
   build:
@@ -68,8 +68,8 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Build and push image
       env:
-        CONTAINER_IMAGE: "gdelgadoh/${{ env.REPO }}:${{ env.GITHUB_SHA }}"
-        CONTAINER_IMAGE_LATEST: "gdelgadoh/${{ env.REPO }}:latest"
+        CONTAINER_IMAGE: ${{env.REPO}}:${{github.sha}}
+        CONTAINER_IMAGE_LATEST: "${{ env.REPO }}:latest"
       
       run: |
         docker build -t  $CONTAINER_IMAGE -t $CONTAINER_IMAGE_LATEST .  

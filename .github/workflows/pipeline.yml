@@ -68,7 +68,7 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Build and push image
       env:
-        CONTAINER_IMAGE: gdelgadoh/${{ env.REPO }}:${{ GITHUB_RUN_ID }}
+        CONTAINER_IMAGE: gdelgadoh/${{ env.REPO }}:${{ GITHUB_SHA }}
         CONTAINER_IMAGE_LATEST: gdelgadoh/${{ env.REPO }}:latest
       
       run: |

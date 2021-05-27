@@ -68,8 +68,8 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Build and push image
       env:
-        CONTAINER_IMAGE: "gdelgadoh/${{ env.REPO }}:${{ GITHUB_RUN_ID }}"
-        CONTAINER_IMAGE_LATEST: "gdelgadoh/${{ env.REPO }}:latest"
+        CONTAINER_IMAGE: gdelgadoh/${{ env.REPO }}:${{ GITHUB_RUN_ID }}
+        CONTAINER_IMAGE_LATEST: gdelgadoh/${{ env.REPO }}:latest
       
       run: |
         docker build -t  $CONTAINER_IMAGE -t $CONTAINER_IMAGE_LATEST .  

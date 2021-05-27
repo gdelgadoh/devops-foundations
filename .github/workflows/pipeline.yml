@@ -68,8 +68,7 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Build and push image
       env:
-        #CONTAINER_IMAGE: ${{env.REPO}}:${{github.sha}}
-        CONTAINER_IMAGE: ${{env.REPO}}:${{github.run.id}}
+        CONTAINER_IMAGE: ${{env.REPO}}:${{github.sha}}
         CONTAINER_IMAGE_LATEST: "${{ env.REPO }}:latest"
       
       run: |

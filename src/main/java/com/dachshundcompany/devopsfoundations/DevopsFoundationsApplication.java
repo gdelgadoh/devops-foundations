@@ -12,7 +12,7 @@ public class DevopsFoundationsApplication {
 		
 		String prueba = null;
 		
-		prueba.split('');
+		prueba.split(' ');
 	}
 
 }

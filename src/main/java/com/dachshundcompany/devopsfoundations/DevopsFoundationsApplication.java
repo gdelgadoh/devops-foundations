@@ -10,9 +10,6 @@ public class DevopsFoundationsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DevopsFoundationsApplication.class, args);
 		
-		String prueba = null;
-		
-		prueba.split("");
 	}
 
 }

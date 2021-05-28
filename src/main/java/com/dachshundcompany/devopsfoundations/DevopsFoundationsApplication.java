@@ -6,10 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DevopsFoundationsApplication {
 	
-	Hola
 
 	public static void main(String[] args) {
 		SpringApplication.run(DevopsFoundationsApplication.class, args);
+		
+		String prueba = null;
+		
+		prueba.split();
 	}
 
 }

@@ -8,4 +8,5 @@ Incluye:
 - Dockerfile para crear un contenedor para el app.
 - Pipeline CI/CD con Github Actions.
 - Prueba
+- Cambio
 - Prueba otro usuario
